@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp">
+
+        <!-- Logo Instagram -->
+        <ImageView
+            android:id="@+id/instagramLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/instagram_logo"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- Ikon pesan dan notifikasi -->
+        <ImageView
+            android:id="@+id/messageIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/heart"
+            android:contentDescription="Message Icon"
+            android:layout_marginEnd="16dp" />
+
+        <ImageView
+            android:id="@+id/notificationIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/share"
+            android:contentDescription="Notifications Icon" />
+    </LinearLayout>
+
+    <!-- ScrollView untuk konten utama -->
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Story Section -->
+            <LinearLayout
+                android:id="@+id/storySection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center">
+
+                <!-- Story Profile Circle -->
+                <ImageView
+                    android:id="@+id/story1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/user_story"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Story 1"
+                    />
+
+                <!-- Story lainnya -->
+                <ImageView
+                    android:id="@+id/story2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/asset_story"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Story 2"
+                    android:background="@drawable/story_circle" />
+
+                <ImageView
+                    android:id="@+id/story3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/liga_story"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Story 3"
+                    android:background="@drawable/story_circle" />
+
+                <!-- Tambahkan lagi jika perlu -->
+
+                <ImageView
+                    android:id="@+id/story4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/asset_story"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Story 4"
+                    android:background="@drawable/story_circle" />
+
+                <ImageView
+                    android:id="@+id/story5"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/liga_story"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Story 5"
+                    android:background="@drawable/story_circle" />
+
+            </LinearLayout>
+
+            <!-- Post Gambar -->
+            <ImageView
+                android:id="@+id/postImage1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/fufufafa_image"
+                android:layout_marginTop="8dp"
+                android:contentDescription="Post Image" />
+
+            <!-- Detail Post -->
+            <LinearLayout
+                android:id="@+id/postDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <!-- Username -->
+                <TextView
+                    android:id="@+id/postUsername1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fufufafa"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+
+                <!-- Caption -->
+                <TextView
+                    android:id="@+id/postCaption1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#Proud"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/holo_blue_bright" />
+
+                <!-- Likes and Comments -->
+                <TextView
+                    android:id="@+id/postLikes1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disukai oleh ikhwan_Hanif"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray" />
+
+                <ImageView
+                    android:id="@+id/postImage2"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:src="@drawable/wah"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="Post Image" />
+
+                <TextView
+                    android:id="@+id/postUsername2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Liga_TRPL"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+
+                <!-- Caption -->
+                <TextView
+                    android:id="@+id/postCaption2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#Proud"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/holo_blue_bright" />
+
+                <TextView
+                    android:id="@+id/postLikes2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disukai oleh ikhwan_Hanif"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray" />
+
+                <ImageView
+                    android:id="@+id/postImage3"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="Post Image"
+                    android:src="@drawable/achiev" />
+
+                <TextView
+                    android:id="@+id/postUsername3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ASSETS_UGM"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black" />
+
+                <!-- Caption -->
+                <TextView
+                    android:id="@+id/postCaption3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#Proud"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/holo_blue_bright" />
+
+                <!-- Likes and Comments -->
+                <TextView
+                    android:id="@+id/postLikes3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disukai oleh ikhwan_Hanif"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Home Button -->
+        <ImageView
+            android:id="@+id/homeButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="16dp"
+            android:contentDescription="Home Button"
+            android:src="@drawable/home"
+            app:layout_constraintEnd_toStartOf="@+id/searchButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Search Button -->
+        <ImageView
+            android:id="@+id/searchButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="16dp"
+            android:contentDescription="Search Button"
+            android:src="@drawable/search"
+            app:layout_constraintEnd_toStartOf="@+id/postButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/homeButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Post Button -->
+        <ImageView
+            android:id="@+id/postButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="16dp"
+            android:contentDescription="Post Button"
+            android:src="@drawable/upload"
+            app:layout_constraintEnd_toStartOf="@+id/notificationsButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/searchButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Notifications Button -->
+        <ImageView
+            android:id="@+id/notificationsButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="16dp"
+            android:contentDescription="Notifications Button"
+            android:src="@drawable/reels"
+            app:layout_constraintEnd_toStartOf="@+id/profileButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/postButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Profile Button -->
+        <ImageView
+            android:id="@+id/profileButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="16dp"
+            android:contentDescription="Profile Button"
+            android:src="@drawable/profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/notificationsButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

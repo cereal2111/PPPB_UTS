@@ -1,0 +1,217 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/pp"
+        android:contentDescription="Profile Image"/>
+
+    <!-- Posts, Followers, Following section -->
+    <LinearLayout
+        android:id="@+id/stats_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/profile_image"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Posts -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="16dp"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6956"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Postingan"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Followers -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="16dp"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27,7jt"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengikut"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Following -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="219"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:gravity="center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mengikuti"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stats_container"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="31dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Ikhwan Hanipp\nProgrammer"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/quote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bio"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:lineSpacingExtra="4dp"
+        android:text="'You might not think that programmers are artists, but programming is an extremely creative profession. It’s logic-based creativity.'\n– John Romero"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quote"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btn_edit_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit profil"
+            android:padding="8dp"
+            android:backgroundTint="#CFCFCF"
+        android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btn_share_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bagikan profil"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#CFCFCF"
+        android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white">
+        <LinearLayout
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="@android:color/white"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/nav_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/home"
+                android:contentDescription="Home Icon"
+                android:padding="16dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/nav_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/search"
+                android:contentDescription="Search Icon"
+                android:padding="16dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/nav_upload"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/upload"
+                android:contentDescription="upload Icon"
+                android:padding="16dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/nav_reels"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/reels"
+                android:contentDescription="reels Icon"
+                android:padding="16dp"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/nav_profile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/profile"
+                android:contentDescription="Profile Icon"
+                android:padding="16dp"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
